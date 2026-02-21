@@ -7,6 +7,8 @@ description = "Multi-provider integration library for Pleme platform - generic t
 repository = "https://github.com/pleme-io/pleme-providers"
 homepage = "https://github.com/pleme-io/pleme-providers"
 readme = "README.md"
+keywords = ["providers", "integration", "registry", "traits", "multi-provider"]
+categories = ["rust-patterns"]
 
 [dependencies]
 async-trait = "0.1"
