@@ -1,0 +1,28 @@
+[package]
+name = "pleme-providers"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Multi-provider integration library for Pleme platform - generic trait abstraction and registry"
+repository = "https://github.com/pleme-io/pleme-providers"
+homepage = "https://github.com/pleme-io/pleme-providers"
+readme = "README.md"
+
+[dependencies]
+async-trait = "0.1"
+tokio = { version = "1.41", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "2.0"
+uuid = { version = "1.11", features = ["serde", "v4"] }
+chrono = { version = "0.4", features = ["serde"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls-manual-roots-no-provider"], optional = true }
+
+[dev-dependencies]
+tokio-test = "0.4"
+
+[features]
+default = ["reqwest"]
+reqwest = ["dep:reqwest"]
+
+
